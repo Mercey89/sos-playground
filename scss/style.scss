@@ -78,12 +78,12 @@
 }
 
 .playground {
+  display: flex;
   padding-left: 23px;
   border-left: 1px solid rgba(255,0255,255,0.5);
 }
 
 .playground__item {
-  display: inline-flex;
   &:not(:last-child) {
     margin-right: 17px;
   }
@@ -99,6 +99,7 @@
   height: 100vh;
   position: relative;
   background-image: url(../images/hero-bg.png);
+  background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
   color: $color-white;
