@@ -4,10 +4,23 @@ $color-dark: #080a0b;
 // Radius
 $radius-default: 4px;
 
+// @include font-title;
 @mixin font-title {
   font-family: 'Bebas Neue', cursive;
   text-transform: uppercase;
   letter-spacing: 3px;
 }
 
-// @include font-title;
+// @include pseudo;
+@mixin pseudo {
+  content: "";
+  position: absolute;
+}
+
+// @include flex-sb-center;
+@mixin flex-sb-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+

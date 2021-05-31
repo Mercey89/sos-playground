@@ -10,9 +10,7 @@
 
 .header__inner {
   padding-top: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @include flex-sb-center;
 }
 
 .header__logo {
@@ -66,8 +64,7 @@
     }
   }
   &::before {
-    content: "";
-    position: absolute;
+    @include pseudo;
     top: 50%; right: 10px;
     transform: translate(-50%, -50%) rotate(90deg);
     width: 5px;
@@ -89,6 +86,7 @@
   }
 }
 
+// Hero ===============
 .hero {
   display: flex;
   flex-direction: column;
@@ -104,10 +102,9 @@
   background-size: cover;
   color: $color-white;
   &::before {
-    content: "";
+    @include pseudo;
     width: 100%;
     height: 100vh;
-    position: absolute;
     background: radial-gradient(189.96% 61.18% at 50% 38.82%,
   rgba(255, 181, 72, 0) 0%,
   rgba(52, 44, 29, 0.80319) 73.22%,
@@ -120,14 +117,17 @@
   z-index: 1;
 }
 
-.hero__title {
+.hero__title,
+.hero__description {
   @include font-title;
+}
+
+.hero__title {
   font-size: 80px;
   line-height: 80px;
   margin-bottom: 10px;
 }
 .hero__description {
-  @include font-title;
   font-size: 24px;
   line-height: 24px;
   margin-bottom: 30px;
@@ -149,10 +149,9 @@
       padding-right: 30px;
       position: relative;
       &::before {
-        content: "";
+        @include pseudo;
         width: 1px;
         height: 26px;
-        position: absolute;
         top: 50%; right: 15px;
         transform: translateY(-50%) rotate(-5deg);
         background-color: rgba(0,0,0,0.5);
@@ -161,10 +160,90 @@
   }
 }
 
+// Royale ===============
+.royale {
+  height: 100vh;
+  position: relative;
+  background-image: url(../images/royale-bg.jpg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &::after,
+  &::before {
+    @include pseudo;
+    width: 100%;
+    height: 100%;
+    top: 0; left: 0;
+  }
+  &::after {
+    background-color: rgba(0,0,0,0.9);
+    z-index: 1;
+  }
+  &::before {
+    background: radial-gradient(136.03% 54.57% at 50% 48.04%, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0) 60.63%, #080A0B 99.74%);
+    z-index: 2;
+  }
+}
+
+.royale__inner {
+  padding: 200px 0;
+  position: relative;
+  z-index: 3;
+}
+
+.royale__start {
+  width: 48%;
+  color: $color-white
+}
+
+.royale__title-sub,
+.royale__title {
+  @include font-title;
+}
+
+.royale__title-sub {
+  font-size: 24px;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+
+.royale__title {
+  font-size: 80px;
+  line-height: 80px;
+  padding-bottom: 10px;
+  position: relative;
+  &::before {
+    @include pseudo;
+    bottom: 0; left: 0;
+    width: 130%;
+    height: 2px;
+    background-color: $color-white;
+  }
+}
+
+.royale__description {
+  max-width: 365px;
+  padding-top: 60px;
+  margin-left: auto;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: justify;
+  & span {
+    position: relative;
+    &::before {
+      @include pseudo;
+      bottom: 0; right: 0;
+      width: 120px;
+      height: 6px;
+      background-color: $color-accent;
+      z-index: -1;
+    }
+  }
+}
+
+// Footer ===============
 .footer__start {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @include flex-sb-center;
   padding-bottom: 30px;
   border-bottom: 1px solid rgba(255,0255,255,0.3);
 }
@@ -210,9 +289,7 @@
 }
 
 .footer__end {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @include flex-sb-center;
   padding-top: 25px;
   padding-bottom: 40px;
 }
@@ -227,8 +304,7 @@
       margin-right: 15px;
       position: relative;
       &::after {
-        content: "";
-        position: absolute;
+        @include pseudo;
         top: 50%; right: -7px;
         width: 1px;
         height: 12px;
