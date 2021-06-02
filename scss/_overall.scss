@@ -43,6 +43,19 @@ body {
 	overflow: hidden;
 }
 
+.btn-accent {
+	display: inline-flex;
+	padding: 18px;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 22px;
+	background: linear-gradient(194.68deg
+, #ffb548 15%, #d2962a 90%);
+	box-shadow: 0px 3px 0px #c38625;
+	border-radius: 4px;
+	color: #1a1917;
+}
+
 .section-page {
 	height: 100vh;
   position: relative;
