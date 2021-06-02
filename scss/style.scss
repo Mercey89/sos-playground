@@ -144,6 +144,27 @@
   }
 }
 
+.hero-scroll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  bottom: 20px; left: 50%;
+  transform: translateX(-50%);
+  background-color: transparent;
+  color: inherit;
+  border: 0;
+  & span {
+    font-size: 12px;
+    line-height: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  & svg {
+    transform: rotate(90deg);
+  }
+}
+
 // Royale ===============
 .royale {
   background-image: url(../images/royale-bg.jpg);
@@ -305,6 +326,7 @@
 }
 
 .accordion__label {
+  transition: all 0.2s ease-in-out;
   &:hover {
     cursor: pointer;
     color: #e9382f;
