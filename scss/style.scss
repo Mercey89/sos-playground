@@ -164,6 +164,8 @@
 .royale {
   height: 100vh;
   position: relative;
+  display: flex;
+  align-items: center;
   background-image: url(../images/royale-bg.jpg);
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -186,14 +188,15 @@
 }
 
 .royale__inner {
-  padding: 200px 0;
+  @include flex-sb-center;
   position: relative;
   z-index: 3;
 }
 
-.royale__start {
-  width: 48%;
-  color: $color-white
+.royale__info {
+  width: 47%;
+  color: $color-white;
+  z-index: 2;
 }
 
 .royale__title-sub,
@@ -215,8 +218,8 @@
   &::before {
     @include pseudo;
     bottom: 0; left: 0;
-    width: 130%;
-    height: 2px;
+    width: 146%;
+    height: 3px;
     background-color: $color-white;
   }
 }
@@ -239,6 +242,35 @@
       z-index: -1;
     }
   }
+}
+
+.royale-slider {
+  width: 50%;
+  z-index: 1;
+}
+
+.slider__list {
+  width: 500px;
+  height: 610px;
+  position: relative;
+}
+
+.slider__item {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  border-radius: $radius-default;
+  transition: all 0.3s ease-in-out;
+}
+
+.slider__img {
+  width: 101%;
+  height: 101%;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover
 }
 
 // Footer ===============
