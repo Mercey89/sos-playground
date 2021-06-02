@@ -112,11 +112,6 @@
   }
 }
 
-.hero__inner {
-  position: relative;
-  z-index: 1;
-}
-
 .hero__title,
 .hero__description {
   @include font-title;
@@ -185,8 +180,6 @@
 
 .royale__inner {
   @include flex-sb-center;
-  position: relative;
-  z-index: 3;
 }
 
 .royale__info {
@@ -277,8 +270,6 @@
 .features__inner {
   max-width: 410px;
   margin-left: auto;
-  position: relative;
-  z-index: 3;
 }
 
 .features__title {
@@ -356,11 +347,58 @@
 }
 
 // System ===============
+.system {
+  background-image: url(../images/system-bg.jpg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+	&::after,
+  &::before {
+    @include pseudo;
+    width: 100%;
+    height: 100%;
+    top: 0; left: 0;
+  }
+  &::before {
+    background: radial-gradient(33.26% 45% at 64.32% 47.1%, rgba(255, 255, 255, 0) 3.36%, rgba(0, 0, 0, 0) 19.22%, #080A0B 99.74%);
+  }
+}
+
 .system__title,
 .system__title-sub {
   text-align: center
 }
 
+.system__title {
+  margin-bottom: 130px;
+}
+
+.requirements__title {
+  @include font-title;
+  color: $color-accent;
+}
+
+.requirements__description {
+  font-size: 18px;
+  line-height: 22px;
+  color: $color-white
+}
+
+.requirements__list {
+  display: grid;
+  max-width: 570px;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+  grid-auto-flow: row dense;
+}
+
+.requirements__item {
+  padding: 25px 15px;
+  border: 1px solid rgba(255,0255,255,0.3);
+  &:last-child {
+    grid-column: span 2;
+  }
+}
 
 // Footer ===============
 .footer__start {

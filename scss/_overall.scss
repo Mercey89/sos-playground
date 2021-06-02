@@ -43,18 +43,23 @@ body {
 	overflow: hidden;
 }
 
-.section-title,
-.section-subtitle {
-	@include font-title;
-	color: $color-white;
-	padding-bottom: 10px;
-}
-
 .section-page {
 	height: 100vh;
   position: relative;
   display: flex;
   align-items: center;
+}
+
+.section-inner {
+	position: relative;
+  z-index: 3;
+}
+
+.section-title,
+.section-subtitle {
+	@include font-title;
+	color: $color-white;
+	padding-bottom: 10px;
 }
 
 .section-title {
