@@ -584,7 +584,8 @@
   color: $color-accent;
 }
 
-input:focus ~ label, input:valid ~ label {
+.subscribe__input:focus ~ .subscribe__label,
+.subscribe__input:valid ~ .subscribe__label {
   top: 8px;
   font-size: 14px;
 }
@@ -603,6 +604,7 @@ input:focus ~ label, input:valid ~ label {
 .subscribe__button {
   min-width: 30%;
   display: flex;
+  align-items: center;
   justify-content: center;
   border: 0;
   outline: 0;
