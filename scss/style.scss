@@ -51,7 +51,7 @@
 .lang-select__custom {
   display: inline-block;
   position: relative;
-  margin-right: 23px;
+  margin-right: 45px;
   & select {
     text-transform: uppercase;
     background-color: transparent;
@@ -63,8 +63,17 @@
       background-color: $color-dark;
     }
   }
+  &::after,
   &::before {
     @include pseudo;
+  }
+  &::after {
+    right: -23px;
+    width: 2px;
+    height: 100%;
+    background-color: rgba(255,255,255,0.5);
+  }
+  &::before {
     top: 50%; right: 10px;
     transform: translate(-50%, -50%) rotate(90deg);
     width: 5px;
@@ -76,8 +85,7 @@
 
 .playground {
   display: flex;
-  padding-left: 23px;
-  border-left: 1px solid rgba(255,0255,255,0.5);
+  align-items: center;
 }
 
 .playground__item {
@@ -438,20 +446,20 @@
 }
 
 .press__start {
-  max-width: 440px;
-  margin-right: 30px;
+  max-width: 50%;
+  margin-right: 80px;
 }
 
 .press__end {
-  width: 50%;
+  width: 100%;
   position: relative;
 }
 
 .quotes__list {
-  width: 529px;
-  margin-left: auto;
+  width: 100%;
   position: absolute;
-  top: -30%;
+  top: 0;
+  right: 0;
 }
 
 .press__title,
@@ -465,15 +473,20 @@
   color: $color-white;
 }
 
+.press__button {
+  position: relative;
+  z-index: 3;
+}
+
 .quotes__article {
-  width: 450px;
+  max-width: 450px;
+  min-width: 300px;
+  width: 100%;
   padding: 20px;
   position: absolute;
+  right: 0;
   background-color: #1A1A1B;
   border-radius: $radius-default +5px;
-  &:not(:last-child) {
-    margin-bottom: 20px;
-  }
 }
 
 .quotes__start {
@@ -582,6 +595,12 @@
   border-radius: $radius-default;
   background-color: rgba(255, 255, 255, 0.08);
   color: $color-accent;
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+  -webkit-text-fill-color: $color-accent;
+  transition: background-color 5000s ease-in-out 0s;
+  }
 }
 
 .subscribe__input:focus ~ .subscribe__label,
@@ -599,6 +618,11 @@
   top: 20px;
   color: rgba(255, 255, 255, 0.5);
   transition: 0.2s ease all;
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+  -webkit-text-fill-color: inherit;
+  }
 }
 
 .subscribe__button {
@@ -683,3 +707,4 @@
     }
   }
 }
+@import "media";

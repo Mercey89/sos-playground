@@ -1,0 +1,177 @@
+@media (max-width: 1025px) {
+  .header__nav,
+  .playground {
+    display: none;
+  }
+  .section-title {
+    font-size: 65px;
+    line-height: 70px;
+  }
+  .slider__list {
+    width: 370px;
+    height: 500px;
+  }
+  .features__title,
+  .system__title,
+  .press__title,
+  .subscribe__title {
+    margin-bottom: 30px;
+  }
+  .footer__nav .nav__item:not(:last-child) {
+    margin-right: 10px;
+  }
+  .social__item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 870px) {
+  .subscribe__email,
+  .footer__copyright {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .subscribe__button {
+    width: 100%;
+  }
+  .subscribe__form {
+    flex-wrap: wrap;
+  }
+  .subscribe__start {
+    max-width: 45%;
+    position: absolute;
+    left: -10%;
+    z-index: -1;
+  }
+  .footer__start {
+    flex-direction: column;
+  }
+  .footer__end {
+    flex-direction: column;
+  }
+  .requirements__list {
+    max-width: 100%;
+  }
+  .press {
+    height: 80vh;
+  }
+  .system {
+    background-position: 100% 50%;
+  }
+  .system {
+    height: 110vh;
+    background-position: 60% 90%;
+    background-size: 110%;
+    padding-top: 70px;
+    align-items: flex-start;
+    &::before {
+      background: radial-gradient(65% 60% at 55% 45%, rgba(255,255,255,0) 30%, rgba(0,0,0,0) 40%, #080A0B 85%);
+    }
+  }
+}
+
+@media (max-width: 769px) {
+  .system {
+    padding-top: 10px;
+    background-position: 60% 100%;
+    &::before {
+      background: radial-gradient(70% 50% at 50% 60%, rgba(255,255,255,0) 30%, rgba(0,0,0,0) 40%, #080A0B 85%);
+    }
+  }
+  .section-title {
+    font-size: 50px;
+    line-height: 65px;
+  }
+  .features__title,
+  .system__title,
+  .press__title,
+  .subscribe__title {
+    margin-bottom: 10px;
+  }
+  .features__inner {
+    max-width: 300px;
+    margin-left: auto;
+  }
+  .accordion__label {
+    font-size: 32px;
+    line-height: 32px;
+  }
+  .features {
+    max-height: 90vh;
+    background-position: 40% 50%;
+    &::before {
+      background: radial-gradient(40% 50% at 15% 30%, rgba(255,255,255,0) 10%, rgba(0,0,0,0) 5%, rgba(4,5,6,0.520671) 35%, #080A0B 95%)
+    }
+  }
+  .royale {
+    height: 120vh;
+    &::after {
+      background-color: rgba(0,0,0,0.7);
+    }
+  }
+  .royale__inner {
+    flex-direction: column;
+  }
+  .royale__info {
+    margin-bottom: 30px;
+  }
+  .royale__description {
+    max-width: 100%;
+    padding-top: 30px;
+  }
+  .royale__info,
+  .royale-slider,
+  .slider__list,
+  .subscribe__inner {
+    width: 100%;
+  }
+  .subscribe__end {
+    max-width: 70%;
+  }
+  .subscribe__start {
+    max-width: 90%;
+    left: -200px;
+  }
+  .press__inner {
+    flex-direction: column;
+  }
+  .press__start {
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 70px;
+  }
+  .press__end {
+    min-height: 425px;
+  }
+  .quotes__article {
+    max-width: 100%;
+  }
+  .nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .footer__sub-nav .nav__item:not(:last-child),
+  .nav__item:not(:last-child) {
+    margin-right: 0;
+  }
+  .footer__sub-nav .nav__item:not(:last-child)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 376px) {
+  .section-title {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .requirements__description {
+    font-size: 14px;
+    line-height: 22px;
+    color: #fff;
+  }
+  .requirements__title {
+    font-size: 18px;
+    line-height: 20px;
+  }
+}

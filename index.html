@@ -53,6 +53,7 @@
                 </a>
               </li>
             </ul>
+            <span class="header__burger burger-js"></span>
           </div>
         </div>
       </div>
@@ -165,7 +166,7 @@
                 <h3 class="requirements__title section-subtitle">Storage:</h3>
                 <p class="requirements__description">8&nbsp;GB available space</p>
               </li>
-              <li class="requirements__item section-subtitle">
+              <li class="requirements__item">
                 <h3 class="requirements__title section-subtitle">Graphics:</h3>
                 <p class="requirements__description">NVIDIA GeForce GTX 660 2GB or&nbsp;AMD Radeon HD&nbsp;7850 2GB DirectX11 (Shader Model&nbsp;5)</p>
               </li>
@@ -287,8 +288,8 @@
               </p>
               <form action="submit" class="subscribe__form">
                 <div class="subscribe__email">
-                  <input class="subscribe__input" type="text" required>
-                  <label class="subscribe__label">Your email address</label>
+                  <input class="subscribe__input" id="email" type="text" required>
+                  <label class="subscribe__label" for="email">Your email address</label>
                 </div>
                 <button class="subscribe__button btn btn-accent" type="submit">Subscribe now</button>
               </form>
