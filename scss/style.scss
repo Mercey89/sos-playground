@@ -79,7 +79,7 @@
     width: 5px;
     height: 14px;
     background-image: url("data:image/svg+xml,%3Csvg width='5' height='14' viewBox='0 0 16 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.35574 3.10404C0.388949 1.83015 1.29753 0 2.89675 0V0C3.50178 0 4.07197 0.283071 4.43774 0.765027L15.5412 15.3955C15.8124 15.7529 15.8124 16.2471 15.5412 16.6045L4.43774 31.235C4.07197 31.7169 3.50178 32 2.89675 32V32C1.29753 32 0.388951 30.1699 1.35575 28.896L11.1429 16L1.35574 3.10404Z' fill='white'/%3E%3C/svg%3E");
-    z-index: -1;
+    pointer-events: none;
   }
 }
 

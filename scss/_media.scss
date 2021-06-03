@@ -23,6 +23,83 @@
   .social__item:not(:last-child) {
     margin-right: 30px;
   }
+
+  .menu-js {
+    &._active {
+      display: block;
+    }
+    .nav__list {
+      height: 100%;
+      width: 100%;
+      padding-top: 100px;
+      position: fixed;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      background-color: rgba(0,0,0,0.9);
+      top: 0; left: 0;
+      overflow: auto;
+    }
+    .nav__item {
+      text-align: center;
+      font-size: 22px;
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  // Burger =========
+  .burger-js {
+    width: 30px;
+    height: 20px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    background: transparent;
+    top: 7px;
+    border: 0;
+    z-index: 1;
+    &::after,
+    &::before,
+    & span {
+      content: "";
+      width: 100%;
+      height: 2px;
+      left: 0;
+      position: absolute;
+      background-color: $color-white;
+      border-radius: 50px;
+      transition: all 0.3s ease 0s;
+    }
+    &::after {
+      top: 0;
+    }
+    &::before {
+      bottom: 0;
+    }
+    & span {
+      top: 9px;
+    }
+    &._active {
+      &::after,
+      &::before,
+      & span {
+        background-color: $color-accent;
+      }
+      &::after {
+        transform: rotate(-45deg);
+        top: 9px;
+      }
+      &::before {
+        transform: rotate(45deg);
+        bottom: 9px;
+      }
+      & span {
+        transform: scale(0);
+      }
+    }
+  }
 }
 
 @media (max-width: 870px) {

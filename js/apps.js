@@ -32,4 +32,9 @@ $(document).ready(function () {
 			scrollTop: $('#royale-section').offset().top
 		}, 1000);
 	});
+	$('.burger-js').click(function(){
+    $('.burger-js,.menu-js').toggleClass('_active');
+		$('body').toggleClass ('lock')
+  })
 })
+
