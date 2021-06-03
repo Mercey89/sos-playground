@@ -120,9 +120,7 @@
     left: -10%;
     z-index: -1;
   }
-  .footer__start {
-    flex-direction: column;
-  }
+  .footer__start,
   .footer__end {
     flex-direction: column;
   }
@@ -131,9 +129,6 @@
   }
   .press {
     height: 80vh;
-  }
-  .system {
-    background-position: 100% 50%;
   }
   .system {
     height: 110vh;
