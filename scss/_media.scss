@@ -103,6 +103,13 @@
 }
 
 @media (max-width: 870px) {
+  .section-page {
+    height: 100%;
+    padding: 50px 0;
+  }
+  .subscribe {
+    padding: 150px 0;
+  }
   .subscribe__email,
   .footer__copyright {
     margin-right: 0;
@@ -128,12 +135,7 @@
     max-width: 100%;
   }
   .press,
-  .subscribe {
-    height: 100%;
-    padding: 50px 0;
-  }
   .system {
-    height: 100%;
     background-position: 60% 90%;
     background-size: 110%;
     padding-top: 70px;
@@ -146,7 +148,6 @@
 
 @media (max-width: 769px) {
   .system {
-    padding-top: 10px;
     background-position: 60% 100%;
     &::before {
       background: radial-gradient(70% 50% at 50% 60%, rgba(255,255,255,0) 30%, rgba(0,0,0,0) 40%, #080A0B 85%);
@@ -178,8 +179,6 @@
     }
   }
   .royale {
-    height: 100%;
-    padding: 50px 0;
     &::after {
       background-color: rgba(0,0,0,0.7);
     }
